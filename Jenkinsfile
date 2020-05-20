@@ -6,9 +6,10 @@ pipeline {
 
   }
   stages {
-    stage('Infraestrutura') {
+    stage('build da imagem') {
       steps {
-        sh 'docker build -t webserver .'
+        sh '''pwd
+docker build -t webserver .'''
       }
     }
 
