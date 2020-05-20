@@ -8,8 +8,7 @@ pipeline {
   stages {
     stage('build da imagem') {
       steps {
-        sh '''pwd
-docker build -t webserver .'''
+        sh 'docker build -f dockerfile -t webserver .'
       }
     }
 
